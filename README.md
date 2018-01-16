@@ -28,18 +28,23 @@ python ./snmp2json.py -c public -n 192.168.1.1 -p 161 -t ifEntry -f ~/snmp.json
 
 ```
 usage: snmp2json.py [-h] [-c COMMUNITY] [-n HOSTNAME] [-p PORT] [-t TABLE]
+                    [-v VERSION] [-f FILENAME]
 
 Reads an SNMP table into a JSON String
 
 optional arguments:
   -h, --help            show this help message and exit
   -c COMMUNITY, --community COMMUNITY
-                        SNMP Community String
+                        SNMP Community String (Default: public)
   -n HOSTNAME, --hostname HOSTNAME
-                        SNMP Hostname
-  -p PORT, --port PORT  SNMP Port
+                        SNMP Hostname (Default: 192.168.1.1)
+  -p PORT, --port PORT  SNMP Port (Default: 161)
   -t TABLE, --table TABLE
-                        SNMP Port
+                        SNMP Port (Default: ifEntry)
+  -v VERSION, --version VERSION
+                        SNMP Version (Default: 2)
+  -f FILENAME, --file FILENAME
+                        Save the results to a file (Default: print to screen)
 ```
 
 ## Example output
